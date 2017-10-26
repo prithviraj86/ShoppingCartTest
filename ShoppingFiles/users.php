@@ -16,6 +16,7 @@ class User
 
       
     }
+	
 	public function getUname()
 	{
 		return $this->name;
