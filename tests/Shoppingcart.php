@@ -1,60 +1,5 @@
 <?php
-class User
-{
-	public $id;
-	public $name;
-	public function __construct($id, $name) {
-		if(empty($id) or empty($name))
-		{
-			throw new Exception("Wrong data");
-		}
-		else
-		{
-			$this->id = $id;
-			$this->name = $name;
-		}
-
-      
-    }
-	public function getUname()
-	{
-		return $this->name;
-	}
-	public function getUid()
-	{
-		return $this->id;
-	}	
-}
-class Product
-{
-	public $id;
-	public $name;
-	public $uid;
-	public $uname;
-	public function __construct(User $user, array $product) {
-		if(empty($user) or empty($product))
-		{
-			throw new Exception("Wrong data");
-		}
-		else
-		{
-			$this->id = $product['id'];
-			$this->name = $product['name'];
-			$this->uid =$user->getUid();
-			$this->uname =$user->getUname();
-		}
-
-      
-    }
-	public function getName()
-	{
-		return $this->name;
-	}
-	public function getId()
-	{
-		return $this->id;
-	}
-}
+include('product.php');
 class ShoppingCart
 {
    public $id;
@@ -102,12 +47,3 @@ $product2=array('id'=>'2','name'=>'WD Harddisk');
 $proobject=new Product($userobject,$product2);
 $result=$scartobj->addToCart($proobject);
 print_r($result);die;
-// class Product
-// {
-	
-	// id
-	// name
-	// user throw in constrocture
-	// inherite father
-	// composition by chair 
-// }

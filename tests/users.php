@@ -1,5 +1,5 @@
 <?php
-class Product 
+class User
 {
 	public $id;
 	public $name;
@@ -16,5 +16,14 @@ class Product
 
       
     }
+	public function getUname()
+	{
+		return $this->name;
+	}
+	public function getUid()
+	{
+		return $this->id;
+	}	
 }
+
 ?>
