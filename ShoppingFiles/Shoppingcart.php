@@ -24,7 +24,7 @@ class ShoppingCart
    }
    public function addToCart(Product $product)
    {
-	   
+	   $this->singleProduct=array();
 	   $this->singleProduct['Cart']=$this->getCname();
 	   $this->singleProduct['Username']=$product->getUname();
 	   
@@ -74,10 +74,10 @@ class ShoppingCart
 $userobject=new User(1,"Prithviraj");
 $product1=array('id'=>1,'name'=>'HP Laptop 5210');
 //print_r($product1);die;
-$proobject=new Product($userobject,$product1);
+$proobject1=new Product($userobject,$product1);
 $scartobj=new ShoppingCart(1,"Cart1");
-$result=$scartobj->addToCart($proobject);
+$result=$scartobj->addToCart($proobject1);
 $product2=array('id'=>2,'name'=>'WD Harddisk');
-$proobject=new Product($userobject,$product2);
-$result=$scartobj->addToCart($proobject);
+$proobject2=new Product($userobject,$product2);
+$result=$scartobj->addToCart($proobject2);
 print_r($result);die;
