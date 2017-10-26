@@ -2,29 +2,33 @@
 include('product.php');
 class ShoppingCart
 {
-   public $id;
-   public $name;
+   Private $id;
+   Private $name;
    public $Products;
    public $singleProduct;
-   public function __construct($id, $name)
+   public function __construct($cid,$cname)
    {
 	    $this->Products=array();
 	    $this->singleProduct=array();
-		if(empty($id) or empty($name))
+		if(empty($cid) or empty($cname))
 		{
 			throw new Exception("Wrong data ");
 		}
 		else
 		{
-			$this->id = $id;
-			$this->name = $name;
+			
+			$this->setCid($cid);
+			$this->setCname($cname);
+			
 		}	
    }
    public function addToCart(Product $product)
    {
-	   $this->singleProduct['Cart']=$this->name;
-	   $this->singleProduct['Username']=$product->uname;
-	   $this->singleProduct[$product->id]=$product->name;
+	   
+	   $this->singleProduct['Cart']=$this->getCname();
+	   $this->singleProduct['Username']=$product->getUname();
+	   
+	   $this->singleProduct[$product->getPid()]=$product->getPname();
 	   
 	   $this->Products[]=$this->singleProduct;
 	   return $this->Products;
@@ -35,15 +39,45 @@ class ShoppingCart
 		   unset($this->products[$key]);
 		  }
    }
+   public function setCname($name)
+	{
+		if(!is_string($name))
+		{
+			throw new Exception("Cart name must be a string!");
+		}
+		else
+		{
+			$this->name=$name;
+		}
+	}
+	public function getCname()
+	{
+		return $this->name;
+	}
+	public function setCid($id)
+	{
+		if(!is_integer($id))
+		{
+			throw new Exception("Cart id must be a number!");
+		}
+		else
+		{
+			$this->id=$id;
+		}
+	}
+	public function getCid()
+	{
+		return $this->id;
+	}
     
 }
 $userobject=new User(1,"Prithviraj");
-$product1=array('id'=>'1','name'=>'HP Laptop 5210');
+$product1=array('id'=>1,'name'=>'HP Laptop 5210');
 //print_r($product1);die;
 $proobject=new Product($userobject,$product1);
-$scartobj=new ShoppingCart('1',"Cart1");
+$scartobj=new ShoppingCart(1,"Cart1");
 $result=$scartobj->addToCart($proobject);
-$product2=array('id'=>'2','name'=>'WD Harddisk');
+$product2=array('id'=>2,'name'=>'WD Harddisk');
 $proobject=new Product($userobject,$product2);
 $result=$scartobj->addToCart($proobject);
 print_r($result);die;
