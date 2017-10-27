@@ -5,19 +5,7 @@ class User
     Private $name;
     Private $user;
 
-    // public function __construct($id, $name) {
-    // if(empty($id) or empty($name))
-    // {
-    // throw new Exception("Wrong data");
-    // }
-    // else
-    // {
-    // $this->id = $id;
-    // $this->name = $name;
-    // }
 
-
-    // }
     public function __construct($id,$name)
     {
         if(empty($id) or empty($name))

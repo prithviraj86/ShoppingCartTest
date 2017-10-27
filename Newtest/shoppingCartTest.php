@@ -40,6 +40,17 @@ class ShoppingCartTest extends PHPUnit_Framework_TestCase
         $this->assertEmpty($result);///Test fail here  if comment this line test passsed
         $this->assertContains(array( 'Cart' => 'Cart1','Username'=>'Prithviraj','Product_id'=>'1','Product_name'=>'Hp Printer'),$result);
     }
+    public function testAddToCartReturnJson()
+    {
+        $this->user = new User(1, 'Prithviraj');
+
+        $this->product=new Product($this->user,array('id'=>1,'name'=>'Hp Printer'));
+
+        $this->cart=new ShoppingCart(1,'Cart1');
+        $json=$this->cart->addToCart($this->product);
+
+        $this->assertJson($json);
+    }
 
 //
 //    public function testThrowException()
