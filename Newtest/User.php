@@ -6,6 +6,7 @@ class User
     Private $user;
 
 
+
     public function __construct($id,$name)
     {
         if(empty($id) or empty($name))

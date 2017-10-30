@@ -36,7 +36,7 @@ class ShoppingCartTest extends PHPUnit_Framework_TestCase
 
         $this->cart=new ShoppingCart(1,'Cart1');
         $result=$this->cart->addToCart($this->product);
-        
+
         $this->assertEmpty($result);///Test fail here  if comment this line test passsed
         $this->assertContains(array( 'Cart' => 'Cart1','Username'=>'Prithviraj','Product_id'=>'1','Product_name'=>'Hp Printer'),$result);
     }
