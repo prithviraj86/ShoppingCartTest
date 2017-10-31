@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2017 at 10:27 AM
+-- Generation Time: Oct 31, 2017 at 03:19 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -56,7 +56,9 @@ CREATE TABLE `customers` (
   `name` int(50) NOT NULL,
   `email` int(40) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `is_admin` tinyint(1) NOT NULL
+  `is_admin` tinyint(1) NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -68,21 +70,42 @@ CREATE TABLE `customers` (
 CREATE TABLE `orders` (
   `id` int(5) NOT NULL,
   `user_id` int(5) NOT NULL,
-  `addresss` varchar(100) NOT NULL,
-  `phone_no` bigint(11) NOT NULL
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_details`
+-- Table structure for table `order_items`
 --
 
-CREATE TABLE `order_details` (
+CREATE TABLE `order_items` (
   `id` int(5) NOT NULL,
   `order_id` int(5) NOT NULL,
-  `product_id` int(5) NOT NULL,
-  `quantity` int(4) NOT NULL
+  `quantity` int(5) NOT NULL,
+  `color` varchar(15) NOT NULL,
+  `price` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_payment`
+--
+
+CREATE TABLE `order_payment` (
+  `id` int(5) NOT NULL,
+  `order_id` int(5) NOT NULL,
+  `paid_amount` int(10) NOT NULL,
+  `payment_method` varchar(50) NOT NULL,
+  `card_number` bigint(16) NOT NULL,
+  `cc_month` int(2) NOT NULL,
+  `cc_year` int(4) NOT NULL,
+  `cc_name_card` varchar(50) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -95,7 +118,9 @@ CREATE TABLE `pages` (
   `id` int(5) NOT NULL,
   `title` varchar(100) NOT NULL,
   `description` varchar(200) NOT NULL,
-  `content` text NOT NULL
+  `content` text NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -108,8 +133,8 @@ CREATE TABLE `products` (
   `id` int(5) NOT NULL,
   `admin_id` int(5) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `price` int(10) NOT NULL,
-  `quantity` int(4) NOT NULL
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -122,6 +147,48 @@ CREATE TABLE `products_categories` (
   `id` int(5) NOT NULL,
   `product_id` int(5) NOT NULL,
   `category_id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_details`
+--
+
+CREATE TABLE `product_details` (
+  `id` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `manufacturer` varchar(100) NOT NULL,
+  `weight` varchar(20) NOT NULL,
+  `description` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_images`
+--
+
+CREATE TABLE `product_images` (
+  `id` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `image_link` int(50) NOT NULL,
+  `small_image_link` int(50) NOT NULL,
+  `thumbnail_link` int(50) NOT NULL,
+  `type` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_price`
+--
+
+CREATE TABLE `product_price` (
+  `id` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `price` int(10) NOT NULL,
+  `special_price` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -156,12 +223,18 @@ ALTER TABLE `orders`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `order_details`
+-- Indexes for table `order_items`
 --
-ALTER TABLE `order_details`
+ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `order_id` (`order_id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `order_id` (`order_id`);
+
+--
+-- Indexes for table `order_payment`
+--
+ALTER TABLE `order_payment`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_id` (`order_id`);
 
 --
 -- Indexes for table `pages`
@@ -181,6 +254,26 @@ ALTER TABLE `products`
 --
 ALTER TABLE `products_categories`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product_details`
+--
+ALTER TABLE `product_details`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `product_images`
+--
+ALTER TABLE `product_images`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product_price`
+--
+ALTER TABLE `product_price`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -211,9 +304,15 @@ ALTER TABLE `orders`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `order_details`
+-- AUTO_INCREMENT for table `order_items`
 --
-ALTER TABLE `order_details`
+ALTER TABLE `order_items`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `order_payment`
+--
+ALTER TABLE `order_payment`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
@@ -235,6 +334,24 @@ ALTER TABLE `products_categories`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `product_details`
+--
+ALTER TABLE `product_details`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product_images`
+--
+ALTER TABLE `product_images`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product_price`
+--
+ALTER TABLE `product_price`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -252,17 +369,34 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `customers` (`id`);
 
 --
--- Constraints for table `order_details`
+-- Constraints for table `order_items`
 --
-ALTER TABLE `order_details`
-  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
-  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+ALTER TABLE `order_items`
+  ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
+
+--
+-- Constraints for table `order_payment`
+--
+ALTER TABLE `order_payment`
+  ADD CONSTRAINT `order_payment_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
 
 --
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`admin_id`) REFERENCES `customers` (`id`);
+
+--
+-- Constraints for table `product_details`
+--
+ALTER TABLE `product_details`
+  ADD CONSTRAINT `product_details_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Constraints for table `product_price`
+--
+ALTER TABLE `product_price`
+  ADD CONSTRAINT `product_price_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product_price` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
