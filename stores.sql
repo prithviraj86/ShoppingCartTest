@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2017 at 06:24 AM
+-- Generation Time: Oct 31, 2017 at 07:46 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -25,10 +25,59 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orderdetail`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `orderdetail` (
+CREATE TABLE `admin` (
+  `id` int(5) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carts`
+--
+
+CREATE TABLE `carts` (
+  `id` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `customer_id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(5) NOT NULL,
+  `name` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` int(5) NOT NULL,
+  `name` int(50) NOT NULL,
+  `email` int(40) NOT NULL,
+  `password` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orderdetails`
+--
+
+CREATE TABLE `orderdetails` (
   `id` int(5) NOT NULL,
   `order_id` int(5) NOT NULL,
   `product_id` int(5) NOT NULL,
@@ -44,7 +93,6 @@ CREATE TABLE `orderdetail` (
 CREATE TABLE `orders` (
   `id` int(5) NOT NULL,
   `user_id` int(5) NOT NULL,
-  `store_id` int(5) NOT NULL,
   `addresss` varchar(100) NOT NULL,
   `phone_no` bigint(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -52,52 +100,16 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Table structure for table `products`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE `products` (
   `id` int(5) NOT NULL,
-  `store_id` int(5) NOT NULL,
+  `category_id` int(5) NOT NULL,
+  `admin_id` int(5) NOT NULL,
   `name` varchar(100) NOT NULL,
   `price` int(10) NOT NULL,
   `quantity` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `store`
---
-
-CREATE TABLE `store` (
-  `id` int(5) NOT NULL,
-  `name` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tmpcarts`
---
-
-CREATE TABLE `tmpcarts` (
-  `id` int(5) NOT NULL,
-  `store_id` int(5) NOT NULL,
-  `product_id` int(5) NOT NULL,
-  `user_id` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `id` int(5) NOT NULL,
-  `name` int(50) NOT NULL,
-  `email` int(40) NOT NULL,
-  `password` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -105,9 +117,35 @@ CREATE TABLE `user` (
 --
 
 --
--- Indexes for table `orderdetail`
+-- Indexes for table `admin`
 --
-ALTER TABLE `orderdetail`
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `carts`
+--
+ALTER TABLE `carts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `customer_id` (`customer_id`) USING BTREE;
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
   ADD PRIMARY KEY (`id`),
   ADD KEY `order_id` (`order_id`),
   ADD KEY `product_id` (`product_id`);
@@ -117,45 +155,48 @@ ALTER TABLE `orderdetail`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `store_id` (`store_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `product`
+-- Indexes for table `products`
 --
-ALTER TABLE `product`
+ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `store_id` (`store_id`);
-
---
--- Indexes for table `store`
---
-ALTER TABLE `store`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tmpcarts`
---
-ALTER TABLE `tmpcarts`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `store_id` (`store_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `category_id` (`category_id`),
+  ADD KEY `admin_id` (`admin_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `orderdetail`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `orderdetail`
+ALTER TABLE `admin`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
@@ -165,27 +206,9 @@ ALTER TABLE `orders`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT for table `products`
 --
-ALTER TABLE `product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `store`
---
-ALTER TABLE `store`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tmpcarts`
---
-ALTER TABLE `tmpcarts`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
+ALTER TABLE `products`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
@@ -193,32 +216,31 @@ ALTER TABLE `user`
 --
 
 --
--- Constraints for table `orderdetail`
+-- Constraints for table `carts`
 --
-ALTER TABLE `orderdetail`
-  ADD CONSTRAINT `orderdetail_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
-  ADD CONSTRAINT `orderdetail_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+ALTER TABLE `carts`
+  ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `carts_ibfk_3` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`);
+
+--
+-- Constraints for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  ADD CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  ADD CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`store_id`) REFERENCES `store` (`id`),
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `customers` (`id`);
 
 --
--- Constraints for table `product`
+-- Constraints for table `products`
 --
-ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`store_id`) REFERENCES `store` (`id`);
-
---
--- Constraints for table `tmpcarts`
---
-ALTER TABLE `tmpcarts`
-  ADD CONSTRAINT `tmpcarts_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `tmpcarts_ibfk_2` FOREIGN KEY (`store_id`) REFERENCES `store` (`id`),
-  ADD CONSTRAINT `tmpcarts_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
