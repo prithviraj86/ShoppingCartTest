@@ -17,7 +17,7 @@ class UserTest extends PHPUnit_Framework_TestCase
 		//This  assertion Sucessfull
 		$this->assertEquals(['name'=>'Prithviraj','email'=>'prithviraj86@gmail.com'], $this->user->selectUserById(1));
 		//This assertion failed
-		$this->assertEquals(['name'=>'Prithviraj','email'=>'prithviraj86@gmail.com1'], $this->user->selectUserById(1));
+		$this->assertEquals(['name'=>'Prithviraj','email'=>'prithviraj86@gmail.com1'], $this->user->selectUserById(1),'Query respose by id Not matched');
 	}
 	public function testSelectUsersCount()
 	{
@@ -44,8 +44,4 @@ class UserTest extends PHPUnit_Framework_TestCase
 		$this->asserttrue($this->user->deleteUser(4));//pass
     }
 	
-
-
-
-
 }

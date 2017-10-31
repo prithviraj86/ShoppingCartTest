@@ -25,7 +25,9 @@ class Product
 	{
 		if(!is_string($name))
 		{
+			
 			throw new Exception("Product name must be a string!");
+			
 		}
 		else
 		{

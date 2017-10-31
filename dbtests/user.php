@@ -19,7 +19,52 @@ class User
 
     }
     //Getter and setter for username
-    public function setUname($name)
+   
+
+    public function selectUserById($id)
+	{
+		$string="select name,email from user where id=".$id;
+		$result=mysqli_query($this->conn,$string);
+		$data=mysqli_fetch_assoc($result);
+		return $data;
+	}
+	public function selectUsers()
+	{
+		$string="select name,email from user";
+		$result=mysqli_query($this->conn,$string);
+		
+		
+		return $result->num_rows;
+		
+	}
+	//Insert user detail
+    public function insertUser($name,$email)
+    {
+		$this->setUname($name);
+		$this->setUemail($email);
+        $string = "INSERT INTO USER (name,email) VALUES ('" . $this->getUname() . "','" . $this->getUemail()  . "')";
+        $insstatus=mysqli_query($this->conn, $string);
+        return $insstatus;
+    }
+	//Update user detail
+	public function updateUser($id,$name,$email)
+    {
+		$this->setUid($id);
+		$this->setUname($name);
+		$this->setUemail($email);
+        $string = "Update User SET name='" . $this->getUname() . "',email='" . $this->getUemail()  . "' where id=".$this->id;
+        $upstatus=mysqli_query($this->conn, $string);
+        return $upstatus;
+    }
+	//Delete user detail
+	public function deleteUser($id)
+    {
+		$this->setUid($id);
+        $string = "delete from User where id=".$this->id;
+        $upstatus=mysqli_query($this->conn, $string);
+        return $upstatus;
+    }
+	 public function setUname($name)
     {
         if(!is_string($name))
         {
@@ -66,51 +111,6 @@ class User
     {
         return $this->email;
     }
-
-    public function selectUserById($id)
-	{
-		$string="select name,email from user where id=".$id;
-		$result=mysqli_query($this->conn,$string);
-		$data=mysqli_fetch_assoc($result);
-		return $data;
-	}
-	public function selectUsers()
-	{
-		$string="select name,email from user";
-		$result=mysqli_query($this->conn,$string);
-		
-		
-		return $result->num_rows;
-		
-	}
-	//Insert user detail
-    public function insertUser($name,$email)
-    {
-		$this->setUname($name);
-		$this->setUemail($email);
-        $string = "INSERT INTO USER (name,email) VALUES ('" . $this->getUname() . "','" . $this->getUemail()  . "')";
-        $insstatus=mysqli_query($this->conn, $string);
-        return $insstatus;
-    }
-	//Update user detail
-	public function updateUser($id,$name,$email)
-    {
-		$this->setUid($id);
-		$this->setUname($name);
-		$this->setUemail($email);
-        $string = "Update User SET name='" . $this->getUname() . "',email='" . $this->getUemail()  . "' where id=".$this->id;
-        $upstatus=mysqli_query($this->conn, $string);
-        return $upstatus;
-    }
-	//Delete user detail
-	public function deleteUser($id)
-    {
-		$this->setUid($id);
-        $string = "delete from User where id=".$this->id;
-        $upstatus=mysqli_query($this->conn, $string);
-        return $upstatus;
-    }
 }
-// $obj=new user();
-// $obj->selectUsers(1);
+
 ?>	

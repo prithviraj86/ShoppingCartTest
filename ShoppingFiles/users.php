@@ -3,19 +3,19 @@ class User
 {
 	Private $id;
 	Private $name;
-	// public function __construct($id, $name) {
-		// if(empty($id) or empty($name))
-		// {
-			// throw new Exception("Wrong data");
-		// }
-		// else
-		// {
-			// $this->id = $id;
-			// $this->name = $name;
-		// }
+	public function __construct($id, $name) {
+		if(empty($id) or empty($name))
+		{
+			throw new Exception("Wrong data");
+		}
+		else
+		{
+			$this->id = $id;
+			$this->name = $name;
+		}
 
       
-    // }
+    }
 	public function setUname($name)
 	{
 		if(!is_string($name))
