@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2017 at 03:19 PM
+-- Generation Time: Nov 01, 2017 at 06:50 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -21,6 +21,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `store`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `addresses`
+--
+
+CREATE TABLE `addresses` (
+  `id` int(4) NOT NULL,
+  `user_id` int(5) NOT NULL,
+  `street` varchar(100) NOT NULL,
+  `city` int(30) NOT NULL,
+  `state` int(20) NOT NULL,
+  `pin_no` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -70,6 +85,7 @@ CREATE TABLE `customers` (
 CREATE TABLE `orders` (
   `id` int(5) NOT NULL,
   `user_id` int(5) NOT NULL,
+  `status` tinyint(1) NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -105,6 +121,21 @@ CREATE TABLE `order_payment` (
   `cc_name_card` varchar(50) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_shipping`
+--
+
+CREATE TABLE `order_shipping` (
+  `id` int(5) NOT NULL,
+  `order_id` int(5) NOT NULL,
+  `address_id` int(4) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -196,6 +227,12 @@ CREATE TABLE `product_price` (
 --
 
 --
+-- Indexes for table `addresses`
+--
+ALTER TABLE `addresses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `carts`
 --
 ALTER TABLE `carts`
@@ -235,6 +272,14 @@ ALTER TABLE `order_items`
 ALTER TABLE `order_payment`
   ADD PRIMARY KEY (`id`),
   ADD KEY `order_id` (`order_id`);
+
+--
+-- Indexes for table `order_shipping`
+--
+ALTER TABLE `order_shipping`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `address_id` (`address_id`);
 
 --
 -- Indexes for table `pages`
@@ -280,6 +325,12 @@ ALTER TABLE `product_price`
 --
 
 --
+-- AUTO_INCREMENT for table `addresses`
+--
+ALTER TABLE `addresses`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
@@ -313,6 +364,12 @@ ALTER TABLE `order_items`
 -- AUTO_INCREMENT for table `order_payment`
 --
 ALTER TABLE `order_payment`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `order_shipping`
+--
+ALTER TABLE `order_shipping`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
@@ -379,6 +436,13 @@ ALTER TABLE `order_items`
 --
 ALTER TABLE `order_payment`
   ADD CONSTRAINT `order_payment_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
+
+--
+-- Constraints for table `order_shipping`
+--
+ALTER TABLE `order_shipping`
+  ADD CONSTRAINT `order_shipping_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  ADD CONSTRAINT `order_shipping_ibfk_2` FOREIGN KEY (`address_id`) REFERENCES `addresses` (`id`);
 
 --
 -- Constraints for table `products`
