@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2017 at 06:50 AM
+-- Generation Time: Nov 01, 2017 at 07:53 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -68,8 +68,8 @@ CREATE TABLE `categories` (
 
 CREATE TABLE `customers` (
   `id` int(5) NOT NULL,
-  `name` int(50) NOT NULL,
-  `email` int(40) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
   `is_admin` tinyint(1) NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
