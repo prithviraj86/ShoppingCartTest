@@ -7,6 +7,7 @@ class Database
     private $dbName='store';
 	public $dbConn;
 	
+	
 	public function __construct()
 	{
 		$this->dbConn= new mysqli($this->serverName, $this->userName, $this->password, $this->dbName);
