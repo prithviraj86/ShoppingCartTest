@@ -22,7 +22,7 @@ include('header.php');
 
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Store Products</h1>
+            <h1 class="jumbotron-heading">Cart</h1>
 
         </div>
     </section>
@@ -39,7 +39,7 @@ include('header.php');
                 ?>
                 <div class="row">
                     <div class="col-md-2">
-                        <img src="https://thumbs.dreamstime.com/z/whirligig-icon-whirlabout-vector-design-peg-top-symbol-web-graphic-jpg-ai-app-logo-object-flat-image-sign-eps-art-picture-stock-79859295.jpg" class="img-thumbnail" style="width: 200px; height: 200px;">
+                        <img src="images/<?php echo $value['image_link']; ?>" style="width: 180px; height: 200px;">
                     </div>
                     <div class="col-md-7">
                         <h3><?php echo $value['name']; ?></h3>

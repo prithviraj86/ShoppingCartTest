@@ -37,7 +37,7 @@ class Cart
     public function getCart()
     {
         $this->session_id=session_id();
-        $sql="select smp.sum_price,p.id,p.name,pp.price from ".$this->table." c
+        $sql="select smp.sum_price,p.id,p.name,pp.price,pi.image_link from ".$this->table." c
             inner join 
               (
                 select sum(ppr.price) as sum_price,cc.session_ids from ".$this->table." cc 
@@ -46,6 +46,7 @@ class Cart
 			inner join products p on p.id=c.product_id
 			inner join product_details pd on pd.product_id=p.id
 			inner join product_price pp on pp.product_id=p.id
+			left join product_images pi on pi.product_id=p.id
 			
 			where c.session_ids='$this->session_id'
 			

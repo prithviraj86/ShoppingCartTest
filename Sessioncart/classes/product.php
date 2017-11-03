@@ -136,7 +136,7 @@ class Product {
     }
     public function listProduct()
     {
-        $sql="select p.id,p.name,pp.price from products p 
+        $sql="select p.id,p.name,pp.price,pi.image_link from products p 
 			inner join product_details pd on pd.product_id=p.id
 			inner join product_price pp on pp.product_id=p.id
 			left join product_images pi on pi.product_id=p.id
@@ -147,7 +147,7 @@ class Product {
 
     public function getProductById(int $id)
     {
-        $sql="select p.id as id, p.name,pd.quantity,pd.manufacturer	,pd.weight,pd.description,pp.price,pp.special_price as sprice,c.id as cart_id from products p
+        $sql="select p.id as id, p.name,pd.quantity,pd.manufacturer	,pd.weight,pd.description,pp.price,pp.special_price as sprice,pi.image_link,c.id as cart_id from products p
 				inner join product_details pd on pd.product_id=p.id
 				inner join product_price pp on pp.product_id=p.id
 				left join product_images pi on pi.product_id=p.id

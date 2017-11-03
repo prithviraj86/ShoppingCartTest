@@ -1,43 +1,33 @@
 <?php
 include("autoload.php");
-
-if(isset($_SESSION['user_id']))
-{
 $proobj=new Product();
-$uid=$_SESSION['user_id'];
 $data=$proobj->listProduct();
-$productdata=array(
-                'name'=>'Lee Coopper Boots',
-                'admin_id'=>1,
-                'manufacturer'=>'Lee Coopper',
-                'quantity'=>10,
-                'weight'=>'300g',
-                'description'=>'Leather bootd',
-                'price'=>4000,
-                'sprice'=>3000
-);
-$proobj->setName($productdata['name']);
-$proobj->setAdminId($productdata['admin_id']);
-$proobj->setManufacturer($productdata['manufacturer']);
-$proobj->setQuantity($productdata['quantity']);
-$proobj->setWeight($productdata['weight']);
-$proobj->setDescription($productdata['description']);
-$proobj->setPrice($productdata['price']);
-$proobj->setSpecialPrice($productdata['sprice']);
-
-$proobj->insertProduct($proobj);
-}
-//$productData=array(
-//                'name'=>'Hp Keyborad',
+//if(isset($_SESSION['user_id']))
+//{
+//$proobj=new Product();
+//$uid=$_SESSION['user_id'];
+//$data=$proobj->listProduct();
+//$productdata=array(
+//                'name'=>'Lee Coopper Boots',
 //                'admin_id'=>1,
-//                'manufacturer'=>'Lekhraj',
-//                'quantity'=>1,
-//                'weight'=>'200g',
-//                'description'=>'Wireless Keyboard Mouse',
-//                'price'=>15000,
-//                'sprice'=>13500
+//                'manufacturer'=>'Lee Coopper',
+//                'quantity'=>10,
+//                'weight'=>'300g',
+//                'description'=>'Leather bootd',
+//                'price'=>4000,
+//                'sprice'=>3000
 //);
-
+//$proobj->setName($productdata['name']);
+//$proobj->setAdminId($productdata['admin_id']);
+//$proobj->setManufacturer($productdata['manufacturer']);
+//$proobj->setQuantity($productdata['quantity']);
+//$proobj->setWeight($productdata['weight']);
+//$proobj->setDescription($productdata['description']);
+//$proobj->setPrice($productdata['price']);
+//$proobj->setSpecialPrice($productdata['sprice']);
+//
+//$proobj->insertProduct($proobj);
+//}
 
 //die;
 ?>
@@ -73,7 +63,7 @@ $proobj->insertProduct($proobj);
 
                             ?>
                             <div class="card">
-                                <img data-src="holder.js/100px280?theme=thumb" alt="Product image cap">
+                                <img src="images/<?php echo $value['image_link']; ?>" alt="Product image cap" class="img-thumbnail rounded mx-auto d-block" >
                                 <h4></h4><?php echo  $value['name']; ?></h4>
                                 <br>
                                 <p class="card-text">Price:-<?php echo  $value['price']; ?></p>
