@@ -30,7 +30,7 @@ class Order{
         $this->setPaymentMode($orderdata['paymode']);
 
     }
-    public function setFirstName($firstname)
+    public function setFirstName(string $firstname)
     {
         if($firstname=='')
         {
@@ -46,7 +46,7 @@ class Order{
     {
         return $this->firstname;
     }
-    public function setMiddelName($middelname)
+    public function setMiddelName(string $middelname)
     {
         if($middelname=='')
         {
@@ -61,7 +61,7 @@ class Order{
     {
         return $this->middelname;
     }
-    public function setLastName($lastname)
+    public function setLastName(string $lastname)
     {
         if($lastname=='')
         {
@@ -76,7 +76,7 @@ class Order{
     {
         return $this->lastname;
     }
-    public function setStreet($street)
+    public function setStreet(string $street)
     {
         if ($street=='')
         {
@@ -90,7 +90,7 @@ class Order{
     {
         return $this->street;
     }
-    public function setCity($city)
+    public function setCity(string $city)
     {
         if ($city=='')
         {
@@ -104,7 +104,7 @@ class Order{
     {
         return $this->city;
     }
-    public function setState($state)
+    public function setState(string $state)
     {
         if ($state==''){
             throw new Exception('State is blank');
@@ -117,7 +117,7 @@ class Order{
     {
         return $this->state;
     }
-    public function setPin($pin)
+    public function setPin(int $pin)
     {
         if ($pin==''){
             throw new Exception('Pin is blank');
@@ -130,7 +130,7 @@ class Order{
     {
         return $this->pin;
     }
-    public function setPaymentMode($paymentmode)
+    public function setPaymentMode(string $paymentmode)
     {
         if ($paymentmode==''){
             throw new Exception('Paymentmode is blank');

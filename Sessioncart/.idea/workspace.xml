@@ -70,21 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+            <state relative-caret-position="1383">
+              <caret line="132" column="42" lean-forward="false" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderstore.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orderstore.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/orderstore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+            <state relative-caret-position="969">
+              <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
               <folding>
                 <marker date="1509690878924" expanded="true" signature="964:1076" ph="insert into orders... " />
                 <marker date="1509690878924" expanded="true" signature="1462:1863" ph="insert into ${$this-&gt;address_table}... " />
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/classes/product.php" />
         <option value="$PROJECT_DIR$/classes/cart.php" />
         <option value="$PROJECT_DIR$/checkout.php" />
-        <option value="$PROJECT_DIR$/classes/order.php" />
         <option value="$PROJECT_DIR$/classes/orderstore.php" />
+        <option value="$PROJECT_DIR$/classes/order.php" />
       </list>
     </option>
   </component>
@@ -264,12 +264,12 @@
       <updated>1509543114378</updated>
       <workItem from="1509543115698" duration="1332000" />
       <workItem from="1509606282300" duration="21786000" />
-      <workItem from="1509686500519" duration="4419000" />
+      <workItem from="1509686500519" duration="4972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27537000" />
+    <option name="totallyTimeSpent" value="28090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -684,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
@@ -702,8 +694,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderstore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+        <state relative-caret-position="969">
+          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
           <folding>
             <marker date="1509690878924" expanded="true" signature="964:1076" ph="insert into orders... " />
             <marker date="1509690878924" expanded="true" signature="1462:1863" ph="insert into ${$this-&gt;address_table}... " />
@@ -719,6 +711,14 @@
             <marker date="1509690878924" expanded="true" signature="3315:3429" ph="insert into order_shipping... " />
             <marker date="1509690878924" expanded="true" signature="3776:3851" ph="insert into order_items... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1383">
+          <caret line="132" column="42" lean-forward="false" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
