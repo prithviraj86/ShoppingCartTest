@@ -1,5 +1,5 @@
 <?php
-include("classes/login.php");
+include("autoload.php");
 
 $obj=new login();
 if(isset($_POST['submit']))
@@ -23,6 +23,10 @@ if(isset($_POST['submit']))
     <link rel="stylesheet" href="css/album.css">
 </head>
 <body>
+<?php
+include('header.php');
+
+?>
 <main role="main">
 
     <section class="jumbotron text-center">

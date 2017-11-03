@@ -1,11 +1,27 @@
 <?php
-include('classes/product.php');
+include("autoload.php");
 if(!isset($_SESSION['user_id']))
 {
     header("location:login.php");
 }
+$data=[
+    'firstname'=>'Lekhraj',
+    'middelname'=>'',
+    'lastname'=>'verma',
+    'paymode'=>'cash',
+    'street'=>'67/104 prem nagar first',
+    'city'=>'kota',
+    'state'=>'rajasthan',
+    'pin'=>324004
+];
 
-$obj=new Product();
+
+
+$obj=new Order($data);
+$objorderstore=new Orderstore();
+$add_id=$objorderstore->insertOrder($obj);
+echo $add_id;die;
+
 if(isset($_POST['ordernow']))
 {
     $data=[
@@ -34,6 +50,10 @@ if(isset($_POST['ordernow']))
     <link rel="stylesheet" href="css/album.css">
 </head>
 <body>
+<?php
+include('header.php');
+
+?>
 <main role="main">
 
     <section class="jumbotron text-center">

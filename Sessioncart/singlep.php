@@ -1,6 +1,5 @@
 <?php
-include("classes/product.php");
-
+include("autoload.php");
 if(!isset($_GET['id']))
 {
 	echo "Wrong url request";
@@ -23,6 +22,10 @@ else
     <link rel="stylesheet" href="css/album.css">
 </head>
 <body>
+<?php
+include('header.php');
+
+?>
 <main role="main">
 
     <section class="jumbotron text-center">

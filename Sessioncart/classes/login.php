@@ -1,19 +1,20 @@
 <?php
-include('connection.php');
-class login extends Database
+class Login
 {
-
+    private $table='customers';
+    private $db;
     public $conn;
+
     public function __construct()
     {
-        //$this->conn=new Database();
+        $this->db=new Database();
         //print_r($this->conn);
-        $this->conn=parent::__construct();
+        $this->conn=$this->db->dbConn;
     }
-    public function login($email,$password)
+    public function login(string $email,string $password)
     {
 
-        $sql="select id from customers where email='$email' and password='$password'";
+        $sql="select id from ".$this->table." where email='$email' and password='$password'";
         //echo $sql;die;
         $result=mysqli_query($this->conn,$sql);
         $data=mysqli_fetch_array($result);

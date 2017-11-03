@@ -1,10 +1,22 @@
 <?php
-include("classes/product.php");
+include("autoload.php");
 
-$obj=new Product();
 
-$data=$obj->listProduct();
+$proobj=new Product();
+$data=$proobj->listProduct();
+//$productData=array(
+//                'name'=>'Hp Keyborad',
+//                'admin_id'=>1,
+//                'manufacturer'=>'Lekhraj',
+//                'quantity'=>1,
+//                'weight'=>'200g',
+//                'description'=>'Wireless Keyboard Mouse',
+//                'price'=>15000,
+//                'sprice'=>13500
+//);
+//$proobj->insertProduct($proobj,$productData);
 
+//die;
 ?>
 <html>
     <head>
@@ -15,6 +27,10 @@ $data=$obj->listProduct();
         <link rel="stylesheet" href="css/album.css">
     </head>
     <body>
+    <?php
+    include('header.php');
+
+    ?>
         <main role="main">
 
             <section class="jumbotron text-center">

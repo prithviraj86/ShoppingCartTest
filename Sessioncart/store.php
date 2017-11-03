@@ -1,14 +1,14 @@
 <?php
-include("classes/product.php");
+include("autoload.php");
 if(isset($_POST['addcart']))
 {
 	//echo $_REQUEST['pid'];die;
 	$pid=$_POST['pid'];
-	$obj=new Product();
+	$obj=new Cart();
 	$result=$obj->addToCart($pid);
 	if($result>0)
 	{
-		header('location:session.php');
+		header('location:index.php');
 		
 	}
 	else

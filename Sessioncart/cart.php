@@ -1,7 +1,6 @@
 <?php
-include("classes/product.php");
-
-$obj=new Product();
+include("autoload.php");
+$obj=new Cart();
 
 $data=$obj->getCart();
 
@@ -15,6 +14,10 @@ $data=$obj->getCart();
     <link rel="stylesheet" href="css/album.css">
 </head>
 <body>
+<?php
+include('header.php');
+
+?>
 <main role="main">
 
     <section class="jumbotron text-center">
