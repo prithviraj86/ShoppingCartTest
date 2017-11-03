@@ -19,7 +19,11 @@ $data=[
 
 $obj=new Order($data);
 $objorderstore=new Orderstore();
-$add_id=$objorderstore->insertOrder($obj);
+$resultset=$objorderstore->insertOrder($obj);
+if($resultset)
+{
+    header("location:Success.php");
+}
 echo $add_id;die;
 
 if(isset($_POST['ordernow']))

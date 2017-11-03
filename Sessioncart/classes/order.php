@@ -20,6 +20,8 @@ class Order{
     {
 
         $this->user_id=session_id();
+        if(isset($orderdata['save']))
+        {
         $this->setFirstName($orderdata['firstname']);
         $this->setMiddelName($orderdata['middelname']);
         $this->setLastName($orderdata['lastname']);
@@ -28,6 +30,7 @@ class Order{
         $this->setState($orderdata['state']);
         $this->setPin($orderdata['pin']);
         $this->setPaymentMode($orderdata['paymode']);
+        }
 
     }
     public function setFirstName(string $firstname)

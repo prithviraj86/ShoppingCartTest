@@ -42,6 +42,7 @@ class Orderstore
         {
             $cart->emptyCart();
         }
+        return $result;
 
 
     }

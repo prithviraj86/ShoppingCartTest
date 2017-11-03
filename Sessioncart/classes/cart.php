@@ -18,8 +18,16 @@ class Cart
     }
     public function addToCart( int $id)
     {
+        if(isset($_SESSION['user_id']))
+        {
+            $uid=$_SESSION['user_id'];
+            $sql="insert into ".$this->table."(product_id, customer_id,session_ids) values($id, $uid,'$this->session_id')";
+        }
+        else
+        {
+            $sql="insert into ".$this->table."(product_id, session_ids) values($id, '$this->session_id')";
+        }
 
-        $sql="insert into ".$this->table."(product_id, session_ids) values($id, '$this->session_id')";
         //echo $sql;die;
         $result=mysqli_query($this->conn, $sql);
 

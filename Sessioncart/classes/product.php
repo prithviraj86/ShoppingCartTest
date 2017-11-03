@@ -11,6 +11,12 @@ class Product {
     private $id;
     private $admin_id;
     private $name;
+    private $manufacturer;
+    private $quantity;
+    private $weight;
+    private $description;
+    private $price;
+    private $special_price;
 
     private $session_id;
 
@@ -30,10 +36,81 @@ class Product {
         }
 
     }
-    public function insertProduct(Product $probj,array $product)
+    public function setId($id)
     {
-        $this->setName($product['name']);
-        $this->setAdminId($this->admin_id);
+        $this->id=$id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setName($name)
+    {
+        $this->name=$name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public  function setAdminId($aid)
+    {
+        $this->admin_id=$aid;
+    }
+    public function getAdminId()
+    {
+        return $this->admin_id;
+    }
+    public function setManufacturer(string $manufacturer)
+    {
+        $this->manufacturer=$manufacturer;
+    }
+    public function getManufacturer()
+    {
+        return $this->manufacturer;
+    }
+    public function setQuantity(int $quantity)
+    {
+        $this->quantity=$quantity;
+    }
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+    public  function setWeight(string $weight)
+    {
+        $this->weight=$weight;
+    }
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+    public  function setDescription(string $description)
+    {
+        $this->description=$description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setPrice(int $price)
+    {
+        $this->price=$price;
+    }
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    public function setSpecialPrice(int $sprice)
+    {
+        $this->special_price=$sprice;
+    }
+    public function getSpecialPrice()
+    {
+        return $this->special_price;
+    }
+    public function insertProduct(Product $probj)
+    {
+
         //$pid=$this->insertProductDetail();
 
 
@@ -41,8 +118,8 @@ class Product {
                                         name,
                                         admin_id) 
                                     values('".
-            $this->getName()."',".
-            $this->getAdminId().")";
+            $probj->getName()."',".
+            $probj->getAdminId().")";
         //echo $sql;die;
         $result=mysqli_query($this->conn,$sql);
         if(!$result)
@@ -50,10 +127,10 @@ class Product {
             throw new Exception('Product not inserted');
         }
         $this->setId($this->conn->insert_id);
-        $this->product_detail=new ProductDetail($this->db,$probj);
-        $this->product_detail->insertProductDetail($product);
-        $this->product_price=new ProductPrice($this->db,$probj);
-        $this->product_price->insertProductPrice($product);
+        $this->product_detail=new ProductDetail($this->db);
+        $this->product_detail->insertProductDetail($probj);
+        $this->product_price=new ProductPrice($this->db);
+        $this->product_price->insertProductPrice($probj);
         return $this->conn->insert_id;
 
     }
@@ -81,29 +158,7 @@ class Product {
         $data=mysqli_fetch_array($result);
         return $data;
     }
-    public function setId($id)
-    {
-        $this->id=$id;
-    }
-    public function getId()
-    {
-        return $this->id;
-    }
-    public function setName($name)
-    {
-        $this->name=$name;
-    }
-    public function getName()
-    {
-        return $this->name;
-    }
-    public  function setAdminId($aid)
-    {
-        $this->admin_id=$aid;
-    }
-    public function getAdminId()
-    {
-        return $this->admin_id;
-    }
+
+
 }
 ?>

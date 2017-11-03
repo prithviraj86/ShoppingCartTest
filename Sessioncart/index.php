@@ -1,9 +1,32 @@
 <?php
 include("autoload.php");
 
-
+if(isset($_SESSION['user_id']))
+{
 $proobj=new Product();
+$uid=$_SESSION['user_id'];
 $data=$proobj->listProduct();
+$productdata=array(
+                'name'=>'Lee Coopper Boots',
+                'admin_id'=>1,
+                'manufacturer'=>'Lee Coopper',
+                'quantity'=>10,
+                'weight'=>'300g',
+                'description'=>'Leather bootd',
+                'price'=>4000,
+                'sprice'=>3000
+);
+$proobj->setName($productdata['name']);
+$proobj->setAdminId($productdata['admin_id']);
+$proobj->setManufacturer($productdata['manufacturer']);
+$proobj->setQuantity($productdata['quantity']);
+$proobj->setWeight($productdata['weight']);
+$proobj->setDescription($productdata['description']);
+$proobj->setPrice($productdata['price']);
+$proobj->setSpecialPrice($productdata['sprice']);
+
+$proobj->insertProduct($proobj);
+}
 //$productData=array(
 //                'name'=>'Hp Keyborad',
 //                'admin_id'=>1,
@@ -14,7 +37,7 @@ $data=$proobj->listProduct();
 //                'price'=>15000,
 //                'sprice'=>13500
 //);
-//$proobj->insertProduct($proobj,$productData);
+
 
 //die;
 ?>

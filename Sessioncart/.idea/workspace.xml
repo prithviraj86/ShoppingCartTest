@@ -11,21 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -44,37 +34,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="10" lean-forward="false" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+            <state relative-caret-position="635">
+              <caret line="132" column="57" lean-forward="true" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
               <folding>
-                <marker date="1509687651453" expanded="true" signature="839:1082" ph="insert into ${$this-&gt;table}... " />
-                <marker date="1509687651453" expanded="true" signature="1656:1861" ph="select p.id,... products" />
-                <marker date="1509687651453" expanded="true" signature="2011:2436" ph="select p.id products" />
-                <marker date="1509687651453" expanded="true" signature="2338:2358" ph="select * fro... carts" />
-                <marker date="1509687651453" expanded="true" signature="2338:2395" ph="select * fro... carts" />
+                <marker date="1509697559746" expanded="true" signature="2386:2631" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509697559746" expanded="true" signature="3187:3392" ph="select p.id,... products" />
+                <marker date="1509697559746" expanded="true" signature="3542:3967" ph="select p.id products" />
+                <marker date="1509697559746" expanded="true" signature="3869:3889" ph="select * fro... carts" />
+                <marker date="1509697559746" expanded="true" signature="3869:3926" ph="select * fro... carts" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productdetail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/productdetail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="53" />
+              <folding>
+                <marker date="1509697686940" expanded="true" signature="258:787" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509697686940" expanded="true" signature="258:850" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509697686940" expanded="true" signature="258:853" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509697686940" expanded="true" signature="258:922" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509697686940" expanded="true" signature="258:924" ph="insert into product_price... " />
+                <marker date="1509697686940" expanded="true" signature="258:925" ph="insert into ${$this-&gt;table}... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productprice.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/productprice.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+              <folding>
+                <marker date="1509697973767" expanded="true" signature="253:459" ph="insert into product_price... " />
+                <marker date="1509697973767" expanded="true" signature="253:603" ph="insert into product_price... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1383">
-              <caret line="132" column="42" lean-forward="false" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+            <state relative-caret-position="227">
+              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -83,22 +103,22 @@
       <file leaf-file-name="orderstore.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/orderstore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="544">
+              <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
               <folding>
-                <marker date="1509690878924" expanded="true" signature="964:1076" ph="insert into orders... " />
-                <marker date="1509690878924" expanded="true" signature="1462:1863" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="1462:1880" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="1462:1883" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="1462:1885" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="1462:1924" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="1462:2296" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="2649:2920" ph="insert into ${$this-&gt;order_payment_table}... " />
-                <marker date="1509690878924" expanded="true" signature="2649:2982" ph="insert into ${$this-&gt;order_payment_table}... " />
-                <marker date="1509690878924" expanded="true" signature="2649:2983" ph="insert into ${$this-&gt;order_payment_table}... " />
-                <marker date="1509690878924" expanded="true" signature="2649:2984" ph="insert into ${$this-&gt;address_table}... " />
-                <marker date="1509690878924" expanded="true" signature="3315:3429" ph="insert into order_shipping... " />
-                <marker date="1509690878924" expanded="true" signature="3776:3851" ph="insert into order_items... " />
+                <marker date="1509692807060" expanded="true" signature="964:1076" ph="insert into orders... " />
+                <marker date="1509692807060" expanded="true" signature="1486:1887" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="1486:1904" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="1486:1907" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="1486:1909" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="1486:1948" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="1486:2320" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="2673:2944" ph="insert into ${$this-&gt;order_payment_table}... " />
+                <marker date="1509692807060" expanded="true" signature="2673:3006" ph="insert into ${$this-&gt;order_payment_table}... " />
+                <marker date="1509692807060" expanded="true" signature="2673:3007" ph="insert into ${$this-&gt;order_payment_table}... " />
+                <marker date="1509692807060" expanded="true" signature="2673:3008" ph="insert into ${$this-&gt;address_table}... " />
+                <marker date="1509692807060" expanded="true" signature="3339:3453" ph="insert into order_shipping... " />
+                <marker date="1509692807060" expanded="true" signature="3800:3875" ph="insert into order_items... " />
               </folding>
             </state>
           </provider>
@@ -126,27 +146,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/store.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cart.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="51" column="79" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+            <state relative-caret-position="442">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
-                <marker date="1509689645818" expanded="true" signature="441:453" ph="insert into ${$his}... " />
-                <marker date="1509689645818" expanded="true" signature="441:527" ph="insert into carts... " />
-                <marker date="1509689645818" expanded="true" signature="765:1348" ph="select smp.s... carts" />
-                <marker date="1509689645818" expanded="true" signature="887:1106" ph="select sum(p... carts" />
-                <marker date="1509689645818" expanded="true" signature="1547:1613" ph="delete from " />
+                <marker date="1509692600346" expanded="true" signature="533:636" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509692600346" expanded="true" signature="690:776" ph="insert into ${$this-&gt;table}... " />
+                <marker date="1509692600346" expanded="true" signature="1025:1608" ph="select smp.s... carts" />
+                <marker date="1509692600346" expanded="true" signature="1147:1366" ph="select sum(p... carts" />
+                <marker date="1509692600346" expanded="true" signature="1807:1873" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -166,21 +176,21 @@
         <option value="$PROJECT_DIR$/../../Sessioncart/autoloader.php" />
         <option value="$PROJECT_DIR$/../../Sessioncart/index.php" />
         <option value="$PROJECT_DIR$/autoloader.php" />
-        <option value="$PROJECT_DIR$/classes/productdetail.php" />
-        <option value="$PROJECT_DIR$/classes/productprice.php" />
         <option value="$PROJECT_DIR$/classes/Database.php" />
         <option value="$PROJECT_DIR$/autoload.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/singlep.php" />
         <option value="$PROJECT_DIR$/cart.php" />
         <option value="$PROJECT_DIR$/store.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/classes/login.php" />
-        <option value="$PROJECT_DIR$/classes/product.php" />
         <option value="$PROJECT_DIR$/classes/cart.php" />
-        <option value="$PROJECT_DIR$/checkout.php" />
         <option value="$PROJECT_DIR$/classes/orderstore.php" />
+        <option value="$PROJECT_DIR$/checkout.php" />
         <option value="$PROJECT_DIR$/classes/order.php" />
+        <option value="$PROJECT_DIR$/classes/product.php" />
+        <option value="$PROJECT_DIR$/classes/productdetail.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/classes/productprice.php" />
       </list>
     </option>
   </component>
@@ -264,12 +274,12 @@
       <updated>1509543114378</updated>
       <workItem from="1509543115698" duration="1332000" />
       <workItem from="1509606282300" duration="21786000" />
-      <workItem from="1509686500519" duration="4972000" />
+      <workItem from="1509686500519" duration="9733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28090000" />
+    <option name="totallyTimeSpent" value="32851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -345,11 +355,11 @@
         <state relative-caret-position="476">
           <caret line="28" column="41" lean-forward="false" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding>
-            <marker date="1509687651453" expanded="true" signature="839:1082" ph="insert into ${$this-&gt;table}... " />
-            <marker date="1509687651453" expanded="true" signature="1656:1861" ph="select p.id,... products" />
-            <marker date="1509687651453" expanded="true" signature="2011:2436" ph="select p.id products" />
-            <marker date="1509687651453" expanded="true" signature="2338:2358" ph="select * fro... carts" />
-            <marker date="1509687651453" expanded="true" signature="2338:2395" ph="select * fro... carts" />
+            <marker date="1509697559746" expanded="true" signature="2386:2631" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509697559746" expanded="true" signature="3187:3392" ph="select p.id,... products" />
+            <marker date="1509697559746" expanded="true" signature="3542:3967" ph="select p.id products" />
+            <marker date="1509697559746" expanded="true" signature="3869:3889" ph="select * fro... carts" />
+            <marker date="1509697559746" expanded="true" signature="3869:3926" ph="select * fro... carts" />
           </folding>
         </state>
       </provider>
@@ -395,11 +405,11 @@
         <state relative-caret-position="204">
           <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding>
-            <marker date="1509689645818" expanded="true" signature="441:453" ph="insert into ${$his}... " />
-            <marker date="1509689645818" expanded="true" signature="441:527" ph="insert into carts... " />
-            <marker date="1509689645818" expanded="true" signature="765:1348" ph="select smp.s... carts" />
-            <marker date="1509689645818" expanded="true" signature="887:1106" ph="select sum(p... carts" />
-            <marker date="1509689645818" expanded="true" signature="1547:1613" ph="delete from " />
+            <marker date="1509692600346" expanded="true" signature="533:636" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509692600346" expanded="true" signature="690:776" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509692600346" expanded="true" signature="1025:1608" ph="select smp.s... carts" />
+            <marker date="1509692600346" expanded="true" signature="1147:1366" ph="select sum(p... carts" />
+            <marker date="1509692600346" expanded="true" signature="1807:1873" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -409,19 +419,19 @@
         <state relative-caret-position="731">
           <caret line="43" column="58" lean-forward="false" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
           <folding>
-            <marker date="1509690878924" expanded="true" signature="964:1076" ph="insert into orders... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1863" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1880" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1883" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1885" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1924" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:2296" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2920" ph="insert into ${$this-&gt;order_payment_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2982" ph="insert into ${$this-&gt;order_payment_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2983" ph="insert into ${$this-&gt;order_payment_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2984" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="3315:3429" ph="insert into order_shipping... " />
-            <marker date="1509690878924" expanded="true" signature="3776:3851" ph="insert into order_items... " />
+            <marker date="1509692807060" expanded="true" signature="964:1076" ph="insert into orders... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1887" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1904" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1907" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1909" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1948" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:2320" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:2944" ph="insert into ${$this-&gt;order_payment_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:3006" ph="insert into ${$this-&gt;order_payment_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:3007" ph="insert into ${$this-&gt;order_payment_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:3008" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="3339:3453" ph="insert into order_shipping... " />
+            <marker date="1509692807060" expanded="true" signature="3800:3875" ph="insert into order_items... " />
           </folding>
         </state>
       </provider>
@@ -446,18 +456,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <marker date="1509625878447" expanded="true" signature="493:1067" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="504:1033" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1044:1067" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1116:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1169:1326" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1209:1303" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1370:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1410:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1449:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1633:1798" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -532,56 +531,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/productdetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <marker date="1509623599544" expanded="true" signature="647:1183" ph="insert into ${$this-&gt;table}... " />
-            <marker date="1509623599544" expanded="true" signature="647:1246" ph="insert into ${$this-&gt;table}... " />
-            <marker date="1509623599544" expanded="true" signature="647:1249" ph="insert into ${$this-&gt;table}... " />
-            <marker date="1509623599544" expanded="true" signature="647:1318" ph="insert into ${$this-&gt;table}... " />
-            <marker date="1509623599544" expanded="true" signature="647:1320" ph="insert into product_price... " />
-            <marker date="1509623599544" expanded="true" signature="647:1321" ph="insert into ${$this-&gt;table}... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/productprice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding>
-            <marker date="1509623629264" expanded="true" signature="479:685" ph="insert into product_price... " />
-            <marker date="1509623629264" expanded="true" signature="479:836" ph="insert into product_price... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="24" />
-          <folding>
-            <marker date="1509625878447" expanded="true" signature="493:1067" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="504:1033" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1044:1067" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1116:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1169:1326" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1209:1303" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1370:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1410:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1449:1798" ph="..." />
-            <marker date="1509625878447" expanded="true" signature="1633:1798" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,17 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <marker date="1509626239972" expanded="true" signature="318:332" ph="select id fr... " />
-            <marker date="1509626239972" expanded="true" signature="318:395" ph="select id fr... customers" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -658,67 +601,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="79" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+        <state relative-caret-position="442">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
-            <marker date="1509689645818" expanded="true" signature="441:453" ph="insert into ${$his}... " />
-            <marker date="1509689645818" expanded="true" signature="441:527" ph="insert into carts... " />
-            <marker date="1509689645818" expanded="true" signature="765:1348" ph="select smp.s... carts" />
-            <marker date="1509689645818" expanded="true" signature="887:1106" ph="select sum(p... carts" />
-            <marker date="1509689645818" expanded="true" signature="1547:1613" ph="delete from " />
+            <marker date="1509692600346" expanded="true" signature="533:636" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509692600346" expanded="true" signature="690:776" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509692600346" expanded="true" signature="1025:1608" ph="select smp.s... carts" />
+            <marker date="1509692600346" expanded="true" signature="1147:1366" ph="select sum(p... carts" />
+            <marker date="1509692600346" expanded="true" signature="1807:1873" ph="delete from " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/product.php">
+    <entry file="file://$PROJECT_DIR$/classes/orderstore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="10" lean-forward="false" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+        <state relative-caret-position="544">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding>
-            <marker date="1509687651453" expanded="true" signature="839:1082" ph="insert into ${$this-&gt;table}... " />
-            <marker date="1509687651453" expanded="true" signature="1656:1861" ph="select p.id,... products" />
-            <marker date="1509687651453" expanded="true" signature="2011:2436" ph="select p.id products" />
-            <marker date="1509687651453" expanded="true" signature="2338:2358" ph="select * fro... carts" />
-            <marker date="1509687651453" expanded="true" signature="2338:2395" ph="select * fro... carts" />
+            <marker date="1509692807060" expanded="true" signature="964:1076" ph="insert into orders... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1887" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1904" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1907" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1909" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:1948" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="1486:2320" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:2944" ph="insert into ${$this-&gt;order_payment_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:3006" ph="insert into ${$this-&gt;order_payment_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:3007" ph="insert into ${$this-&gt;order_payment_table}... " />
+            <marker date="1509692807060" expanded="true" signature="2673:3008" ph="insert into ${$this-&gt;address_table}... " />
+            <marker date="1509692807060" expanded="true" signature="3339:3453" ph="insert into order_shipping... " />
+            <marker date="1509692807060" expanded="true" signature="3800:3875" ph="insert into order_items... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/orderstore.php">
+    <entry file="file://$PROJECT_DIR$/classes/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        <state relative-caret-position="374">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
-            <marker date="1509690878924" expanded="true" signature="964:1076" ph="insert into orders... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1863" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1880" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1883" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1885" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:1924" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="1462:2296" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2920" ph="insert into ${$this-&gt;order_payment_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2982" ph="insert into ${$this-&gt;order_payment_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2983" ph="insert into ${$this-&gt;order_payment_table}... " />
-            <marker date="1509690878924" expanded="true" signature="2649:2984" ph="insert into ${$this-&gt;address_table}... " />
-            <marker date="1509690878924" expanded="true" signature="3315:3429" ph="insert into order_shipping... " />
-            <marker date="1509690878924" expanded="true" signature="3776:3851" ph="insert into order_items... " />
+            <marker date="1509626239972" expanded="true" signature="318:332" ph="select id fr... " />
+            <marker date="1509626239972" expanded="true" signature="318:395" ph="select id fr... customers" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1383">
-          <caret line="132" column="42" lean-forward="false" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+        <state relative-caret-position="227">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="132" column="57" lean-forward="true" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
+          <folding>
+            <marker date="1509697559746" expanded="true" signature="2386:2631" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509697559746" expanded="true" signature="3187:3392" ph="select p.id,... products" />
+            <marker date="1509697559746" expanded="true" signature="3542:3967" ph="select p.id products" />
+            <marker date="1509697559746" expanded="true" signature="3869:3889" ph="select * fro... carts" />
+            <marker date="1509697559746" expanded="true" signature="3869:3926" ph="select * fro... carts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/productdetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="53" />
+          <folding>
+            <marker date="1509697686940" expanded="true" signature="258:787" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509697686940" expanded="true" signature="258:850" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509697686940" expanded="true" signature="258:853" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509697686940" expanded="true" signature="258:922" ph="insert into ${$this-&gt;table}... " />
+            <marker date="1509697686940" expanded="true" signature="258:924" ph="insert into product_price... " />
+            <marker date="1509697686940" expanded="true" signature="258:925" ph="insert into ${$this-&gt;table}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/productprice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <marker date="1509697973767" expanded="true" signature="253:459" ph="insert into product_price... " />
+            <marker date="1509697973767" expanded="true" signature="253:603" ph="insert into product_price... " />
+          </folding>
         </state>
       </provider>
     </entry>
